@@ -48,6 +48,7 @@ class SnipsHue:
         # Idiotic idea
         #for room in self.roomName_roomId.keys():
             #self.light_on(room)
+        print ("[HUE] bullshit")
 
     def light_off(self, room):
         if self.roomName_roomId.get(room) is None:
