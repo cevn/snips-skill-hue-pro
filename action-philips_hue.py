@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from hermes_python.hermes import Hermes
+import pprint
 from os.path import expanduser
 import os
 from snipshue.snipshue import SnipsHue
@@ -71,6 +72,9 @@ class Skill_Hue:
     ####    section -> extraction of slot value
     def extract_house_rooms(self, intent_message):
         house_rooms = []
+        pp = pprint.PrettyPrinter(indent=4)
+        print("INTENT MESSAGE???")
+        pp.pprint(intent_message)
         if intent_message.slots.house_room:
             print("ROOM INSIDE HOSUEROOMS" + intent_message.slots.house_room)
             for room in intent_message.slots.house_room.all():
