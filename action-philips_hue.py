@@ -75,6 +75,10 @@ class Skill_Hue:
         pp = pprint.PrettyPrinter(indent=4)
         print("INTENT MESSAGE???")
         pp.pprint(vars(intent_message))
+        print("INTENT")
+        pp.pprint(vars(intent_message.intent))
+        print("SLOTS")
+        pp.pprint(vars(intent_message.slots))
         if intent_message.slots.house_room:
             print("ROOM INSIDE HOSUEROOMS" + intent_message.slots.house_room)
             for room in intent_message.slots.house_room.all():
