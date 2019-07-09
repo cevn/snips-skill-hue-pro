@@ -144,6 +144,7 @@ class Skill_Hue:
             for room in rooms:
                 self.snipshue.light_brightness(percent, room.lower())
         else:
+            print("Disable more crap")
             # self.snipshue.light_brightness_all(percent) CUT THIS SHIT OUT DUDE
         self.terminate_feedback(hermes, intent_message)
     def set_color(self, hermes, intent_message, rooms):
@@ -155,6 +156,7 @@ class Skill_Hue:
             for room in rooms:
                 self.snipshue.light_color(color, room.lower())
         else:
+            print("Disable more crap")
             # self.snipshue.light_color_all(color)
         self.terminate_feedback(hermes, intent_message)
 
@@ -167,6 +169,7 @@ class Skill_Hue:
             for room in rooms:
                 self.snipshue.light_scene(scene, room.lower())
         else:
+            print("Disable more crap")
             # self.snipshue.light_scene_all(scene)
         self.terminate_feedback(hermes, intent_message)
 
@@ -177,6 +180,7 @@ class Skill_Hue:
                 self.snipshue.light_up(percent, room.lower())
         else:
             # self.snipshue.light_up_all(percent)
+            print("Disable more crap")
         self.terminate_feedback(hermes, intent_message)
 
     def shift_down(self, hermes, intent_message, rooms):
@@ -185,6 +189,7 @@ class Skill_Hue:
             for room in rooms:
                 self.snipshue.light_down(percent, room.lower())
         else:
+            print("Disable more crap")
             # self.snipshue.light_down_all(percent)
         self.terminate_feedback(hermes, intent_message)
 
