@@ -72,8 +72,9 @@ class Skill_Hue:
     def extract_house_rooms(self, intent_message):
         house_rooms = []
         if intent_message.slots.house_room:
+            print("ROOM INSIDE HOSUEROOMS" + intent_message.slots.house_room)
             for room in intent_message.slots.house_room.all():
-                print type(room.value)
+                print(type(room.value))
                 house_rooms.append(room.value)
         return house_rooms
     def extract_percentage(self, intent_message, default_percentage):
