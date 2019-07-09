@@ -80,7 +80,8 @@ class Skill_Hue:
         print("SLOTS")
         pp.pprint(vars(intent_message.slots))
         if intent_message.slots.house_room:
-            print("ROOM INSIDE HOSUEROOMS" + intent_message.slots.house_room)
+            print("ROOM INSIDE HOSUEROOMS")
+            pp.pprint(vars(intent_message.slots.house_room))
             for room in intent_message.slots.house_room.all():
                 print(type(room.value))
                 house_rooms.append(room.value)
