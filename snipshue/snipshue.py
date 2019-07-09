@@ -57,8 +57,10 @@ class SnipsHue:
         self._put_group_state({"on": False}, self.roomName_roomId[room])
 
     def light_off_all(self):
-        for room in self.roomName_roomId.keys():
-            self.light_off(room)
+        # Seriously has anyone used this shit?
+        #for room in self.roomName_roomId.keys():
+        #    self.light_off(room)
+        print ("HUE OFF BULLSHIT")
 
     def light_brightness(self, percent, room):
         if self.roomName_roomId.get(room) is None:
