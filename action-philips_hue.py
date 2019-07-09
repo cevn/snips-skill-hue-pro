@@ -124,14 +124,16 @@ class Skill_Hue:
             for room in rooms:
                 self.snipshue.light_on(room.lower())
         else:
-            self.snipshue.light_on_all()
+            # self.snipshue.light_on_all() ## WHY???
+            print("Disable turning on all lights randomly")
         self.terminate_feedback(hermes, intent_message)
     def turn_off(self, hermes, intent_message, rooms):
         if len(rooms) > 0:
             for room in rooms:
                 self.snipshue.light_off(room.lower())
         else:
-            self.snipshue.light_off_all()
+            # self.snipshue.light_off_all()
+            print("Disable turning off all lights randomly")
         self.terminate_feedback(hermes, intent_message)
     def set_brightness(self, hermes, intent_message, rooms):
         percent = self.extract_percentage(intent_message, None)

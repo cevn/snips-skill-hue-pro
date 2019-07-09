@@ -45,10 +45,8 @@ class SnipsHue:
         self._put_group_state({"on": True, "bri": 200, "hue": 39392,"sat": 13}, self.roomName_roomId[room])
 
     def light_on_all(self):
-        # Idiotic idea
-        #for room in self.roomName_roomId.keys():
-            #self.light_on(room)
-        print ("[HUE] bullshit")
+        for room in self.roomName_roomId.keys():
+            self.light_on(room)
 
     def light_off(self, room):
         if self.roomName_roomId.get(room) is None:
@@ -57,10 +55,8 @@ class SnipsHue:
         self._put_group_state({"on": False}, self.roomName_roomId[room])
 
     def light_off_all(self):
-        # Seriously has anyone used this shit?
-        #for room in self.roomName_roomId.keys():
-        #    self.light_off(room)
-        print ("HUE OFF BULLSHIT")
+        for room in self.roomName_roomId.keys():
+            self.light_off(room)
 
     def light_brightness(self, percent, room):
         if self.roomName_roomId.get(room) is None:
